@@ -1,0 +1,6 @@
+{
+  "GOOGLE_MAP_API": {
+    "iOS": "googlemap_api_for_ios",
+    "BROWSE": "googlemap_api_for_browser"
+  }
+}

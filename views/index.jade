@@ -1,0 +1,58 @@
+extends layout/_base
+block contents
+  .panel-search.content-block(ng-if="status.search")
+    a.button.button-big.button-round(href="#" ng-click="getCurrentGeolocation()") お店を探す
+
+  .panel-loading.content-block(ng-if="status.loading")
+    span.preloader.preloader-white(style="width: 120px; height: 120px")
+
+  .panel-result(ng-if="status.result")
+
+    .point-map
+      #map.map-view
+
+    .point-info
+      .point-name
+        |{{point.name}}
+        .point-category {{point.category}}
+        .point-pr(ng-if="point.pr")
+          .text(ng-bind-html="point.pr")
+
+      .point-budget(ng-if="point.budget")
+        span.label 平均予算
+        .text {{point.budget}}
+
+      .point-holiday(ng-if="point.holiday")
+        span.label 定休日
+        .text(ng-bind-html="point.holiday")
+
+      .point-opentime(ng-if="point.opentime")
+        span.label 営業時間
+        .text(ng-bind-html="point.opentime")
+
+      .point-address {{point.address}}
+
+      ul.point-contact-list.row
+        li.col-50
+          i.icon.icon-form-tel
+          |{{point.tel}}
+        li.col-50
+          i.icon.icon-form-url
+          a(in-app-link="{{point.url}}") ぐるなびでみる
+
+      .point-image(ng-if="point.image_url")
+        .point-image-view.bg-img-cover(back-img="{{point.image_url}}")
+
+      .credit
+        |提供：ぐるなび
+
+      .note.
+        最新の情報は店舗へ直接お問合せください.
+
+    .change-point(ng-click="getLocalPoint()")
+      .change-point-inner
+        他のお店にする
+
+
+
+

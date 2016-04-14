@@ -1,0 +1,212 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+ul, ol{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul > li, ol > li{
+}
+
+// Overwrite Framework7
+body{
+  fon-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+}
+.pages{
+  background-color: rgb(226, 58, 95);
+  color: #fff;
+  a, a:hover {
+    color: #fff;
+  }
+}
+.navbar{
+  background: inherit;
+  pointer-events: none;
+  top: 10px;
+  &:after{
+    display: none;
+  }
+  a.icon-only{
+    pointer-events: visible;
+    border-radius: 9999px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+.navbar-fixed .page-content, .navbar-through .page-content{
+  padding-top: 0;
+}
+.button{
+  border: 1px solid #fff;
+}
+
+// App Styles
+.is-hidden{
+  display: hidden;
+}
+.screen-centering{
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+.panel-search{
+  @extend .screen-centering;
+}
+.panel-loading{
+  @extend .screen-centering;
+}
+.panel-result{
+  position: relative;
+  padding-top: 240px;
+  padding-bottom: 54px;
+  .point-map{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    &:after{
+      content: '';
+      display: block;
+      background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+      height: 8px;
+      pointer-events: none;
+    }
+  }
+  .point-info{
+    padding: 10px 15px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .point-name{
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .point-category {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .point-pr{
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .point-budget{
+    margin-bottom: 15px;
+  }
+  .point-holiday{
+    margin-bottom: 15px;
+  }
+  .point-opentime{
+    margin-bottom: 15px;
+  }
+  .point-address{
+    margin-bottom: 15px;
+  }
+  .point-contact-list{
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    li {
+      display: inline-block;
+      margin-right: 5px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    .icon{
+      margin-right: 5px;
+    }
+  }
+  .point-image{
+    margin: 15px;
+    text-align: center;
+  }
+  .point-image-view{
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .credit{
+  }
+  .sponsor{
+    text-align: right;
+  }
+  .change-point{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width:100%;
+
+    &:before{
+      content: '';
+      display: block;
+      height: 5px;
+      width: 100%;
+      background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+      pointer-events: none;
+    }
+    .change-point-inner{
+      width:100%;
+      box-sizing: border-box;
+      padding: 15px;
+      background-color: rgb(52, 71, 113);
+      text-align: center;
+    }
+  }
+  .note{
+    color: rgb(239, 209, 216);
+    font-size: 10px;
+  }
+}
+
+.bg-img-cover{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.map-view{
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background-color: rgb(239, 209, 216);
+
+  &.status-load:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+  }
+}

@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    include ../partial/_meta
+    include ../partial/_style
+    title Aji
+  body(ng-app="AjiApp")
+    .statusbar-overlay
+    include ../partial/_panel
+
+    .views(ng-controller="MainCtrl" ng-init="init()")
+      .view.view-main
+        include ../partial/_header
+
+        .pages.navbar-fixed
+          .page-content
+            block contents
+    include ../partial/_bottomJs
+

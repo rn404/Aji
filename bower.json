@@ -1,0 +1,28 @@
+{
+  "name": "Aji",
+  "authors": [
+    "rn404 <nekonekonekona@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "Framework7": "framework7#^1.4.2",
+    "angular": "^1.2.2",
+    "ngCordova": "^0.1.26-alpha",
+    "angular-google-maps": "^2.3.2",
+    "angular-route": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "ngstorage": "^0.3.10",
+    "angular-cookies": "^1.5.3",
+    "angular-resource": "^1.5.3",
+    "angular-sanitize": "^1.5.3"
+  }
+}

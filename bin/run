@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gulp default
+cordova run browser

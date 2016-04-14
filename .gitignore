@@ -1,0 +1,14 @@
+.DS_Store
+variable.json
+
+node_modules/
+www/libs/
+www/*.html
+www/js/
+www/css/
+
+platforms/
+plugins/
+!plugins/fetch.json
+!plugins/browser.json
+!plugins/ios.json
