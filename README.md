@@ -1,3 +1,5 @@
+Cordovaでアプリを作ってみるよ
+
 # Dependencies
 
 * Xcode
