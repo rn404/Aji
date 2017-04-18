@@ -47,11 +47,10 @@ cordova plugin add cordova-plugin-splashscreen
 cordova run ios
 ```
 
-# Other
+# Before
 
 ```
-gulp
+variable.json.tmp => variable.json
+assets/coffee/const.coffee.tmp => assets/coffee/const.coffee
 ```
-run default gulp tasks.
-build jade template, coffee script to native javascript, scss to stylesheet.
-
+rewrite and rename

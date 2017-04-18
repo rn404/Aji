@@ -80,6 +80,12 @@ body{
   @extend .screen-centering;
 }
 .panel-result{
+  visibility: hidden;
+  pointer-events: none;
+  &.active{
+    visibility: visible;
+    pointer-events: auto;
+  }
   position: relative;
   padding-top: 240px;
   padding-bottom: 54px;

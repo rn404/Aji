@@ -2,10 +2,10 @@ ajiApp.factory 'GeoApi', ['$resource', '$http', '$q', ($resource, $http, $q) ->
   class GeoApi
     getNearPoint: (coords, start = 0) ->
       deffered = $q.defer()
-      $http.jsonp 'http://api.gnavi.co.jp/RestSearchAPI/20150630/',{
+      $http.jsonp CONST.GNAV_SEARCH_API,{
         timeout: 5000
         params:
-          keyid: '1ad84384694a4327e97edc644bb6a9ed'
+          keyid: CONST.GNAV_SEARCH_KEY
           format: 'json'
           latitude: coords.latitude
           longitude: coords.longitude

@@ -6,8 +6,7 @@ block contents
   .panel-loading.content-block(ng-if="status.loading")
     span.preloader.preloader-white(style="width: 120px; height: 120px")
 
-  .panel-result(ng-if="status.result")
-
+  .panel-result(ng-class="{ active: status.result }")
     .point-map
       #map.map-view
 
@@ -49,7 +48,7 @@ block contents
       .note.
         最新の情報は店舗へ直接お問合せください.
 
-    .change-point(ng-click="getLocalPoint()")
+    .change-point(ng-click="getLocalPoint()" ng-if="status.result")
       .change-point-inner
         他のお店にする
 
