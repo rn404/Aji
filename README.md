@@ -20,12 +20,14 @@ npm install
 bower install
 ```
 
-then get google API key and rewrite `variable.json`
+* Get google map API key
+* Get Gurunavi Search API key
+
 ```
-cp variable.json.tmp variable.json
-vim variable.json
-# input your google api key
+variable.json.tmp => variable.json
+assets/coffee/const.coffee.tmp => assets/coffee/const.coffee
 ```
+rewrite and rename
 
 ## install cordova plugins
 
@@ -49,8 +51,4 @@ cordova run ios
 
 # Before
 
-```
-variable.json.tmp => variable.json
-assets/coffee/const.coffee.tmp => assets/coffee/const.coffee
-```
-rewrite and rename
+
