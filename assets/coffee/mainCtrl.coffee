@@ -110,8 +110,10 @@ ajiApp.controller 'MainCtrl', ['$scope', '$rootScope', '$f7', 'GeoApi', 'Generat
       _map = new GenerateMap(angular.element('#map')[0], $scope.currentPosition, _attr)
       $scope.map = _map
 
-    scrollToTop()
     setStatus(STATUS.RESULT)
+    scrollToTop()
+
+
     return
 
 
