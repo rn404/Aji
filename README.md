@@ -49,6 +49,4 @@ cordova plugin add cordova-plugin-splashscreen
 cordova run ios
 ```
 
-# Before
-
 
