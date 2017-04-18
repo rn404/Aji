@@ -78,7 +78,6 @@ ajiApp.controller 'MainCtrl', ['$scope', '$rootScope', '$f7', 'GeoApi', 'Generat
 
     geolocationSuccess = (position) ->
       console.log 'current', position.coords.latitude + ', ' + position.coords.longitude
-      setStatus(STATUS.RESULT)
       _coords = 
         latitude: position.coords.latitude
         longitude: position.coords.longitude
@@ -112,6 +111,7 @@ ajiApp.controller 'MainCtrl', ['$scope', '$rootScope', '$f7', 'GeoApi', 'Generat
       $scope.map = _map
 
     scrollToTop()
+    setStatus(STATUS.RESULT)
     return
 
 
