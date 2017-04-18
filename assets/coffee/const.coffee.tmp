@@ -1,0 +1,4 @@
+CONST = {
+  GNAV_SEARCH_API : 'http://api.gnavi.co.jp/RestSearchAPI/'
+  GNAV_SEARCH_KEY : 'gurunavi_search_api_key'
+}
